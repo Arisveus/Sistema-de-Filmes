@@ -16,9 +16,8 @@ return new class extends Migration
             $table->string('nome');
             $table->text('sinopse');
             $table->date('ano');
-            $table->string('categoria_id');
             $table->string('imagem')->nullable(); 
-            $table->timestamps();
+
         });
     }
 
