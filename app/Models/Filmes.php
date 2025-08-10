@@ -14,6 +14,7 @@ class Filmes extends Model
         'ano',
         'categoria_id',
         'imagem',
+        'trailer',
     ];
 
     public function user() : BelongsTo
@@ -21,7 +22,7 @@ class Filmes extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function categorias() : BelongsTo
+    public function categoria() : BelongsTo
     {
         return $this->belongsTo(Categorias::class);
     }

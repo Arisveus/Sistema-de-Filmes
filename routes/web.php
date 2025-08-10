@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FilmesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('filmes.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -17,11 +18,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-Route::middleware('auth')->group(function (){
-    Route::get('/filmes', [App\Http\Controllers\FilmesController::class, 'index'])->name('filmes.index');
-    Route::get('/filmes/{id}', [App\Http\Controllers\FilmesController::class, 'show'])->name('filmes.show');
-    Route::get('/filmes/create', [App\Http\Controllers\FilmesController::class, 'create'])->name('filmes.create');
-    Route::post('/filmes', [App\Http\Controllers\FilmesController::class, 'store'])->name('filmes.store');
+Route::middleware('auth')->group(function () {
+    Route::get('/filmes', [FilmesController::class, 'index'])->name('filmes.index');
+    Route::get('/filmes/{id}', [FilmesController::class, 'show'])->name('filmes.show');
+    Route::get('/filme/create', [FilmesController::class, 'create'])->name('filmes.create');
+    Route::post('/filmes', [FilmesController::class, 'store'])->name('filmes.store');
+    Route::get('/filmes/{id}/edit', [FilmesController::class, 'edit'])->name('filmes.edit');
+    Route::put('/filmes/{id}', [FilmesController::class, 'update'])->name('filmes.update');
+    Route::delete('/filmes/{id}', [FilmesController::class, 'destroy'])->name('filmes.destroy');
 });

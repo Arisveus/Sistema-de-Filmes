@@ -33,6 +33,6 @@ class CategoriasController extends Controller
     public function show(Categorias $categoria)
     {
         $filmes = $categoria->filmes;
-        return view('categories.show', compact('category', 'filmes'));
+        return view('categorias.show', compact('categoria', 'filmes'));
     }
 }

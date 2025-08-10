@@ -17,7 +17,10 @@ return new class extends Migration
             $table->text('sinopse');
             $table->date('ano');
             $table->string('imagem')->nullable(); 
-
+            $table->string('trailer')->nullable();
+            $table->unsignedBigInteger('categoria_id');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

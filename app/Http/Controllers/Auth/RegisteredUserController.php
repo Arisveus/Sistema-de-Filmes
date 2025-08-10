@@ -39,6 +39,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'nivel_acesso' => 2, // 2 para usuário normal, 1 para admin
         ]);
 
         event(new Registered($user));
