@@ -10,15 +10,18 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-      
-      
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+          
         <!-- Scripts -->
         @vite(['resources/css/app.css','resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('nav.css') }}">
+
 
 
         <!-- Seu CSS personalizado -->
-        <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
+     
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -34,7 +37,7 @@
             @endisset
 
             <!-- Page Content -->
-            <main class="pt-20">
+            <main class="pt-10">
                  @yield('content') 
             </main>
         </div>
