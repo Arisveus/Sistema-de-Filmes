@@ -10,9 +10,15 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+      
+      
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css','resources/js/app.js'])
+
+
+        <!-- Seu CSS personalizado -->
+        <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -28,7 +34,7 @@
             @endisset
 
             <!-- Page Content -->
-            <main>
+            <main class="pt-20">
                  @yield('content') 
             </main>
         </div>
