@@ -7,7 +7,14 @@ use Carbon\Carbon;
 <div class="container mx-auto py-8 max-w-lg">
     <h1 class="text-2xl font-bold mb-6">{{ $filme->nome }}</h1>
     @if($filme->imagem)
-        <img src="{{ asset('storage/' . $filme->imagem) }}" alt="{{ $filme->nome }}" class="w-full h-64 object-cover mb-4 rounded">
+        @php
+            $isUrl = Str::startsWith($filme->imagem, 'http');
+        @endphp
+        @if($isUrl)
+            <img src="{{ $filme->imagem }}" alt="{{ $filme->nome }}" class="w-full h-64 object-cover mb-4 rounded">
+        @else
+            <img src="{{ asset('storage/' . $filme->imagem) }}" alt="{{ $filme->nome }}" class="w-full h-64 object-cover mb-4 rounded">
+        @endif
     @endif
     <p class="mb-2"><strong>Sinopse:</strong> {{ $filme->sinopse }}</p>
     <p class="mb-2"><strong>Ano:</strong> {{ Carbon::parse($filme->ano)->format('Y') }}</p>
