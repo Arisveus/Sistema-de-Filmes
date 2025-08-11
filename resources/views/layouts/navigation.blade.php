@@ -16,7 +16,7 @@
                     <x-nav-link class="itens border-b-2 border-transparent hover:border-white" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Home') }}
                     </x-nav-link>
-                     <x-nav-link class="itens border-b-2 border-transparent hover:border-white" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link class="itens border-b-2 border-transparent hover:border-white" :href="route('lista.index')" :active="request()->routeIs('lista.index')">
                         {{ __('Minha Lista') }}
                     </x-nav-link>
                 </div>

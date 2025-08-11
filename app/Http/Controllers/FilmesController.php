@@ -51,13 +51,10 @@ class FilmesController extends Controller
             'trailer' => 'nullable|url',
         ]);
 
-        $caminhoImagem = null;
         if ($request->hasFile('imagem')) {
-            $imagem = $request->file('imagem');
-            $caminhoImagem = $imagem->store('filmes', 'public');
-            $validated['imagem'] = $caminhoImagem;
+            $validated['imagem'] = $request->file('imagem')->store('filmes', 'public');
         } else {
-            $validated['imagem'] = null;
+            unset($validated['imagem']);
         }
         Filmes::create($validated);
         return redirect()->route('filmes.index');
@@ -72,7 +69,7 @@ class FilmesController extends Controller
 
     public function update(Request $request, $id)
     {
-        if (!Auth::check() || Auth::user()->nivel != 1) {
+        if (!Auth::check() || Auth::user()->nivel_acesso != 1) {
             abort(403, 'Acesso não autorizado.');
         }
         $filme = Filmes::findOrFail($id);
@@ -95,7 +92,7 @@ class FilmesController extends Controller
 
     public function destroy($id)
     {
-        if (!Auth::check() || Auth::user()->nivel != 1) {
+        if (!Auth::check() || Auth::user()->nivel_acesso != 1) {
             abort(403, 'Acesso não autorizado.');
         }
         $filme = Filmes::findOrFail($id);

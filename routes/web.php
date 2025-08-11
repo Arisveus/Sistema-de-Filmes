@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FilmesController;
+use App\Http\Controllers\ListaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/filmes/{id}/edit', [FilmesController::class, 'edit'])->name('filmes.edit');
     Route::put('/filmes/{id}', [FilmesController::class, 'update'])->name('filmes.update');
     Route::delete('/filmes/{id}', [FilmesController::class, 'destroy'])->name('filmes.destroy');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/lista', [ListaController::class, 'index'])->name('lista.index');
+    Route::post('/lista/{filme}', [ListaController::class, 'store'])->name('lista.store');
+    Route::delete('/lista/{filme}', [ListaController::class, 'destroy'])->name('lista.destroy');
 });
