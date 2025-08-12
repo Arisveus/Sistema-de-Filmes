@@ -1,5 +1,6 @@
 @php
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 @endphp
 @extends('layouts.app')
 
@@ -45,8 +46,12 @@ use Carbon\Carbon;
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($filmesFiltrados as $filme)
                 <div onclick="window.location='{{ route('filmes.show', $filme['id'] ?? $loop->index) }}'" class="card-filme relative rounded overflow-hidden shadow-lg cursor-pointer group h-64">
-                    @if(!empty($filme['imagem']))
+                @if(!empty($filme['imagem']))
+                @if(Str::startsWith($filme['imagem'], 'http'))
+                    <img src="{{ $filme['imagem'] }}" alt="{{ $filme['nome'] }}" class="img-card">
+                @else
                         <img src="{{ asset('storage/' . $filme['imagem']) }}" alt="{{ $filme['nome'] }}" class="img-card">
+                    @endif
                     @endif
                     <div class="titulo-card">
                         <h2>{{ $filme['nome'] }}</h2>

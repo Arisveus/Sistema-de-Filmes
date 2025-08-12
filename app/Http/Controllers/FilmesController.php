@@ -74,7 +74,7 @@ class FilmesController extends Controller
         }
         $filme = Filmes::findOrFail($id);
         $validated = $request->validate([
-            'nome' => 'required|string|max:255',
+            'nome' => 'required|string|max:40',
             'sinopse' => 'required|string|max:1000',
             'ano' => 'required|date',
             'categoria_id' => 'required|exists:categorias,id',

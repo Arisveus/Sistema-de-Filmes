@@ -38,7 +38,7 @@ use Illuminate\Support\Str;
     onclick="window.location='{{ route('filmes.show', $filme->id) }}'"
     class="card-filme relative rounded overflow-hidden shadow-lg cursor-pointer group h-64">
 
-    {{-- Imagem --}}
+    
     @if($filme->imagem)
         @if(Str::startsWith($filme->imagem, 'http'))
             <img src="{{ $filme->imagem }}" alt="{{ $filme->nome }}" class="img-card">
@@ -47,12 +47,12 @@ use Illuminate\Support\Str;
         @endif
     @endif
 
-    {{-- Título --}}
+    
     <div class="titulo-card">
         <h2>{{ $filme->nome }}</h2>
     </div>
 
-    {{-- Overlay com infos --}}
+    
     <div class="overlay-card">
         <p class="mb-2 text-center">{{ $filme->sinopse }}</p>
         <p class="text-sm">Ano: {{ Carbon::parse($filme->ano)->format('Y') }}</p>
@@ -61,7 +61,7 @@ use Illuminate\Support\Str;
         @if(Auth::check() && Auth::user()->nivel_acesso == 1)
         <div class="flex gap-2 mt-2">
             <a href="{{ route('filmes.edit', $filme->id) }}" class="btn-amarelo">Editar</a>
-            <form action="{{ route('filmes.destroy', $filme->id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este filme?');">
+            <form action="{{ route('filmes.destroy', $filme->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn-vermelho">Excluir</button>
@@ -86,12 +86,6 @@ use Illuminate\Support\Str;
 </div>
     @endforeach
 </div>
-
-
-
-
-
-
 </div>
 </div>
 @endsection
