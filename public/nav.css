@@ -153,3 +153,221 @@ nav {
 .container{
     margin-top: 50px;
 }
+.ano,.categoria{
+    color:white;
+    font-weight: bold;
+    font-size: 30px;
+    align-items: center;
+
+}
+.filtro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.form-ano-categoria{
+    gap: 50px;
+}
+
+.inputs-filtros{
+    border-radius: 10px;
+}
+.btn-filtrar {
+    background-color: rgba(37, 119, 132, 0.448);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 120px;
+    transition: background-color 0.3s ease;
+}
+.btn-filtrar:hover{
+     background-color: rgb(37, 119, 132);
+     border: 1px solid rgb(44, 141, 147);
+}
+.btn-adicionar-filme{
+    background-color: rgba(37, 119, 132, 0.448);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 180px;
+    transition: background-color 0.3s ease;
+}
+.btn-adicionar-filme:hover{
+     background-color: rgb(37, 119, 132);
+   
+}
+
+
+/*show.blade.php*/
+ .filme-bg {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        object-fit: cover;
+        filter: brightness(0.9);
+        pointer-events: none;
+    }
+    .filme-overlay {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.6);
+        z-index: 1;
+        pointer-events: none;
+    }
+    .filme-card {
+        position: fixed;
+        left: 90px;        
+        bottom: 40px;       
+        z-index: 2;
+        border-radius: 12px;
+        width: 600px;
+        max-width: 900px;
+        height: 600px;
+        padding: 40px 40px 32px 32px;
+        margin: 0;          
+}
+    .filme-card h1 {
+        color: white;
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    .filme-card p,
+    .filme-card a {
+        color: white;
+    }
+    .desc {
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+    .filme-card .btns {
+        display: flex;
+        gap: 12px;
+        
+        align-items: center;
+    }
+    .filme-card .btn {
+        background: #eee;
+        color: #222;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 18px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+    }
+    .btn.trailer { 
+       background-color: rgba(37, 119, 132, 0.448);
+       width: 250px;
+       height: 60px;
+       display: flex;
+       justify-content: center;
+       color: white;
+       align-items: center;
+    
+    }
+    .btn.trailer:hover { 
+         background-color: rgb(37, 119, 132); 
+    }
+    .voltar{
+       margin-top: 90px;
+       width: 120px;
+        background-color: rgb(75, 74, 74);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .voltar2{
+       font-size: 20px;
+      
+    }
+    .filme-card .btn.add { background: #22c55e; color: #fff; }
+    .filme-card .btn.add:hover { background: #16a34a; }
+    .filme-card .btn.edit { background: #facc15; color: #fff; }
+    .filme-card .btn.edit:hover { background: #eab308; }
+    .filme-card .btn.delete { background: #dc2626; color: #fff; }
+    .filme-card .btn.delete:hover { background: #b91c1c; }
+
+    /* Adicionar Filmes */
+
+    
+    .container-add {
+        background-color: rgba(0, 0, 0, 0.487);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-top: 100px;
+        color: white;
+    }
+    .btn-save {
+        background-color: rgba(37, 119, 132, 0.448);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+    .btn-save:hover{
+        background-color: rgb(37, 119, 132); 
+    }
+    .input-color{
+        background-color: rgba(0, 0, 0, 0.494);
+        color: white;
+    }
+    .title-favorito{
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+        font-size: 30px;
+    }
+
+    /* Editar Filmes */
+
+    .editar{
+        margin-top: 45px;
+    }
+
+    /* Registrar*/
+    .container-add-diferenciado {
+        background-color: rgba(0, 0, 0, 0.487);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        color: white;
+    }
+    .senha{
+        color: gray;
+    }
+    .senha:hover{
+        color: white;
+        text-decoration: underline;
+    }
+    .title-reg {
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        
+    }   
+    .inicio-site{
+        background-image: url('sitefundo.jpg');
+        background-size: cover;
+        background-position: center;
+    }
