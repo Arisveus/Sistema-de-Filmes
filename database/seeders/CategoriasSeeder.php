@@ -24,5 +24,33 @@ class CategoriasSeeder extends Seeder
         Categorias::create([
             'nome' => 'Ficção'
         ]);
+
+        Categorias::create([
+            'nome' => 'Comédia'
+        ]);
+
+        Categorias::create([
+            'nome' => 'Romance'
+        ]);
+
+        Categorias::create([
+            'nome' => 'Terror'
+        ]);
+
+        Categorias::create([
+            'nome' => 'Animação'
+        ]);
+
+        Categorias::create([
+            'nome' => 'Documentário'
+        ]);
+
+        Categorias::create([
+            'nome' => 'Aventura'
+        ]);
+
+        Categorias::create([
+            'nome' => 'Fantasia'
+        ]);
     }
 }

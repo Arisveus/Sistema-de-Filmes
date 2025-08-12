@@ -43,11 +43,11 @@ class FilmesController extends Controller
     {
         // Lógica para armazenar o filme
         $validated = $request->validate([
-            'nome' => 'required|string|max:255',
+            'nome' => 'required|string|max:30',
             'sinopse' => 'required|string|max:1000',
             'ano' => 'required|date',
             'categoria_id' => 'required|exists:categorias,id',
-            'imagem' => 'nullable|image|mimes:avif,jpeg,png,jpg,gif|max:2048',
+            'imagem' => 'nullable|image|mimes:avif,jpeg,png,jpg,gif,webp|max:2048',
             'trailer' => 'nullable|url',
         ]);
 

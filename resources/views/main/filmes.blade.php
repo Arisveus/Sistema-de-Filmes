@@ -6,9 +6,11 @@ use Illuminate\Support\Str;
 
 @section('content')
 <div class="container mx-auto py-8">
+@if(Auth::check() && Auth::user()->nivel_acesso == 1)
     <div class="flex items-center justify-between mb-6">
         <a href="{{ route('filmes.create') }}" class="btn-adicionar-filme text-white  shadow">Adicionar Filme</a>
     </div>
+    @endif
     <div class="inicio block bg-white  shadow p-4  mb-6">
         <p class="bem-vindos">Bem vindos ao <br> Step Brother's Films!</p>
     </div>
