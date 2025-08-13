@@ -11,7 +11,7 @@
         </div>
         <div>
             <label for="sinopse" class="block font-semibold">Sinopse</label>
-            <textarea name="sinopse" id="sinopse" rows="3" class="input-color w-full border rounded px-3 py-2" required></textarea>
+            <textarea name="sinopse" id="sinopse" rows="3" class="input-color w-full border rounded px-3 py-2 resize-none" required></textarea>
         </div>
         <div>
             <label for="ano" class="block font-semibold">Ano</label>

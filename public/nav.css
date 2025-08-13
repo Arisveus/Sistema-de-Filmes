@@ -4,6 +4,12 @@ main {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+     font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 nav {
@@ -30,13 +36,12 @@ nav {
     font-size: 80px;
     font-weight: bold;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .bem-vindos {
-  font-family: "Playwrite AU QLD", cursive;
-  font-optical-sizing: auto;
-  font-weight: weight;
+  font-family: "Delius", cursive;
+  font-weight: 1000;
   font-style: normal;
 }
 .ver-trailer:hover {
@@ -141,9 +146,7 @@ nav {
 }
 
 .arredondar {
-   
     color: white;
-   
     border-radius: 200px;
    
 }
@@ -173,6 +176,7 @@ nav {
 
 .inputs-filtros{
     border-radius: 10px;
+    width: 96px;
 }
 .btn-filtrar {
     background-color: rgba(37, 119, 132, 0.448);
@@ -190,6 +194,8 @@ nav {
      border: 1px solid rgb(44, 141, 147);
 }
 .btn-adicionar-filme{
+    display: flex;
+    justify-content: center;
     background-color: rgba(37, 119, 132, 0.448);
     color: white;
     padding: 10px 20px;
@@ -198,6 +204,7 @@ nav {
     cursor: pointer;
     font-weight: bold;
     width: 180px;
+    align-items: center;
     transition: background-color 0.3s ease;
 }
 .btn-adicionar-filme:hover{
@@ -283,7 +290,7 @@ nav {
          background-color: rgb(37, 119, 132); 
     }
     .voltar{
-       margin-top: 90px;
+       margin-top: 30px;
        width: 120px;
         background-color: rgb(75, 74, 74);
         display: flex;
@@ -331,6 +338,7 @@ nav {
     .input-color{
         background-color: rgba(0, 0, 0, 0.494);
         color: white;
+        resize: none;
     }
     .title-favorito{
         text-align: center;
@@ -370,4 +378,16 @@ nav {
         background-image: url('sitefundo.jpg');
         background-size: cover;
         background-position: center;
+    }
+
+    .palavras-inicio {
+        color: white;
+        font-size: 100px;
+        text-align: center;
+        margin-top: 20px;
+       
+    }
+
+    .color-white {
+        color: white;
     }
