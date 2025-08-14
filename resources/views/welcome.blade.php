@@ -62,8 +62,8 @@
                 O melhor gerenciador de trailers do mundo!
             </span>
             <span class="palavra-inicio  lg:text-xl mt-4 text-[#1b1b18] dark:text-[#EDEDEC]">
-                Incontáveis filmes, infinitas histórias, todos a um clique de distância. <br>
-                Assista, descubra e viva o cinema como nunca antes!
+                <span>Incontáveis filmes, infinitas histórias, todos a um clique de distância.</span> <br><br>
+                <span class='desc-welcome'>Assista, descubra e viva o cinema como nunca antes!</span>
     </span>
         </div>
 

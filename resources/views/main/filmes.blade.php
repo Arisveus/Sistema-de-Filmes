@@ -71,7 +71,7 @@ use Illuminate\Support\Str;
 
        @if($filme->trailer)
     <div class="flex items-center gap-2 mt-2">
-        <a href="{{ $filme->trailer }}" target="_blank" onclick="event.stopPropagation()" class="btn-azul flex items-center justify-center gap-1">
+        <a href="{{ $filme->trailer }}" target="_blank" onclick="event.stopPropagation()" class="btn-filtrar flex items-center justify-center gap-1">
             Ver Trailer
         </a>
         <form action="{{ route('lista.store', $filme->id) }}" method="POST">
