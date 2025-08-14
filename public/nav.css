@@ -176,7 +176,7 @@ nav {
 
 .inputs-filtros{
     border-radius: 10px;
-    width: 96px;
+    width: 100px;
 }
 .btn-filtrar {
     background-color: rgba(37, 119, 132, 0.448);
@@ -380,14 +380,51 @@ nav {
         background-position: center;
     }
 
-    .palavras-inicio {
-        color: white;
-        font-size: 100px;
-        text-align: center;
-        margin-top: 20px;
-       
+    .logo-welcome {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-right: 20px;
+        margin-top: -50px;
     }
+    .palavra-inicio {
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+    }
+    .maior {
+        font-size: 40px;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .fundo-welcome {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
-    .color-white {
-        color: white;
-    }
+  .login-welcome {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 140px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #000000, #333333);
+    color: #fff;
+    margin-top: 20px;
+    margin-right: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.login-welcome:hover {
+    background: linear-gradient(135deg, #1a1a1a, #555555);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
